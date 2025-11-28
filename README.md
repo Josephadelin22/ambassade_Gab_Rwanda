@@ -1,36 +1,35 @@
 
 
-
 # 🟦 Portail de la Nouvelle Ambassade du Gabon
 
 **Next.js • TypeScript • Tailwind CSS • shadcn/ui • Prisma • PostgreSQL**
 
-Ce projet a pour objectif de construire un portail moderne, sécurisé et performant pour la **Nouvelle Ambassade du Gabon**, comprenant plusieurs modules essentiels :
+Ce projet vise à construire un portail moderne, sécurisé et performant pour la **Nouvelle Ambassade du Gabon**, comprenant :
 
 * Immatriculation des ressortissants
 * Portail Étudiants
 * Système d’Alerte
 * Espace Investisseurs
-* Page d’accueil avec galerie d’images
-* Mini espace Administratif
+* Galerie d’accueil
+* Mini Dashboard Administratif
 
 
 
-## 🚀 1. Technologies utilisées
+# 🚀 1. Technologies utilisées
 
-| Technologie                 | Rôle                               |
-| --------------------------- | ---------------------------------- |
-| **Next.js 15 (App Router)** | Framework principal du projet      |
-| **TypeScript**              | Typage strict pour un code robuste |
-| **Tailwind CSS**            | Stylisation moderne et rapide      |
-| **shadcn/ui**               | Composants UI réutilisables        |
-| **Prisma ORM**              | Gestion de la base de données      |
-| **PostgreSQL**              | Base de données principale         |
-| **React Hook Form + Zod**   | Formulaires typés et sécurisés     |
+| Technologie                 | Rôle                             |
+| --------------------------- | -------------------------------- |
+| **Next.js 15 (App Router)** | Framework principal              |
+| **TypeScript**              | Typage strict et sûr             |
+| **Tailwind CSS**            | Stylisation rapide et moderne    |
+| **shadcn/ui**               | Composants UI professionnels     |
+| **Prisma ORM**              | Gestion de la base de données    |
+| **PostgreSQL**              | Base de données principale       |
+| **React Hook Form + Zod**   | Formulaires validés et sécurisés |
 
 
 
-## 📁 2. Arborescence générale
+# 📁 2. Arborescence du projet
 
 ```
 /app
@@ -71,7 +70,7 @@ README.md
 
 
 
-## ⚙️ 3. Installation et démarrage
+# ⚙️ 3. Installation & démarrage
 
 ### 1. Cloner le projet
 
@@ -86,7 +85,9 @@ cd projet-ambassade-gabon
 npm install
 ```
 
-### 3. Créer le fichier `.env`
+### 3. Configurer les variables d’environnement
+
+Créer un fichier `.env` :
 
 ```
 DATABASE_URL="postgresql://user:password@localhost:5432/ambassade"
@@ -100,87 +101,210 @@ npx prisma generate
 npx prisma migrate dev --name init
 ```
 
-### 5. Lancer en développement
+### 5. Lancer le projet
 
 ```bash
 npm run dev
 ```
 
----
 
-## 🧩 4. Modules du portail
+
+# 🧩 4. Modules du portail
 
 ### ✔ Immatriculation
 
-Formulaire complet, données personnelles, pièces jointes.
+Dépôt de dossier, pièces jointes, validation consulaire.
 
 ### ✔ Portail Étudiants
 
-Informations académiques, suivi, documents.
+Suivi, documents académiques, demandes diverses.
 
-### ✔ Système d'Alerte
+### ✔ Système d’Alerte
 
-Signalement rapide, géolocalisation, messages urgents.
+Alertes sécuritaires, messages urgents, géolocalisation.
 
 ### ✔ Espace Investisseurs
 
-Projets, documents, envois de dossiers.
+Dossiers de projet, opportunités, contacts officiels.
 
 ### ✔ Page d’accueil
 
-Présentation, sections dynamiques, galerie d’images.
+Présentation institutionnelle + petite galerie d’images.
 
-### ✔ Mini espace Admin
+### ✔ Mini Dashboard Admin
 
-Gestion des immatriculations, étudiants, alertes et investisseurs.
+Gestion interne des dossiers, alertes, documents et contenus.
 
 
 
-## 🛠 5. Scripts utiles
+# 🟦 5. Gestion des Administrateurs & Organisation du Projet
+
+## 🎯 Objectif
+
+Permettre à l’équipe diplomatique (non technique) de gérer le portail **sans écrire une seule ligne de code**, grâce à un **Espace Admin dédié**.
+
+
+
+## 🟩 5.1 Interface Admin
+
+Les administrateurs auront un espace dédié :
+
+```
+/admin
+```
+
+Il contient :
+
+* Tableau de bord
+* Gestion des immatriculations
+* Gestion des étudiants
+* Gestion des alertes
+* Gestion des dossiers investisseurs
+* Gestion de la galerie
+* Gestion des documents PDF
+* Gestion des actualités
+* Paramètres de contact et informations publiques
+
+Chaque section inclut :
+
+* Tableau des données
+* Bouton “Ajouter”
+* Bouton “Modifier”
+* Bouton “Supprimer”
+* Formulaires simples et intuitifs
+* Zéro manipulation technique
+
+Les admins interagissent uniquement avec l’interface :
+**clique → remplir → enregistrer**.
+
+
+
+## 🟩 5.2 Rôles types (organisation diplomatique)
+
+### 👨‍💼 Admin Consulaire
+
+* Valide immatriculations
+* Gère dossiers étudiants
+
+### 📰 Admin Communication
+
+* Publie actualités
+* Met à jour documents et galerie
+
+### 🧑‍✈️ Admin Sécurité
+
+* Gère alertes, urgences, SOS
+
+### 👨‍💼 Admin Investisseurs
+
+* Consulte dossiers
+* Coordonne les réponses
+
+### 👑 Super Admin (Ambassadeur)
+
+* Accès total
+* Modifie toutes les sections
+
+
+
+## 🟩 5.3 Comment le développeur interagit avec l’équipe
+
+### Le développeur est responsable de :
+
+* La maintenance technique
+* Les mises à jour
+* Les correctifs
+* La sécurité
+* Les nouvelles fonctionnalités
+* Le déploiement et l’hébergement
+
+### L’équipe admin est responsable de :
+
+* Le contenu
+* La validation des dossiers
+* Les alertes
+* La communication publique
+
+Aucune manipulation git, npm, terminal ou code.
+
+
+
+## 🟩 5.4 Support & Communication
+
+Une organisation professionnelle recommandée :
+
+### Canal de support
+
+WhatsApp, Telegram ou Slack :
+**“Support Portail Ambassade”**
+
+### Outil de suivi
+
+Notion ou Trello :
+
+* À faire
+* En cours
+* Fait
+* Bug détecté
+* Nouvelle fonctionnalité
+
+### Formation de l’équipe
+
+1. Démonstration vidéo (5–10 min)
+2. Documentation PDF (capturé d'écran + explications simples)
+3. Assistance mensuelle ou trimestrielle
+
+
+
+# 🛠 6. Scripts utiles
 
 ```bash
-npm run dev         # mode développement
-npm run build       # build production
-npm run start       # démarrage production
-npm run db:studio   # interface Prisma
+npm run dev
+npm run build
+npm run start
+npm run db:studio
 ```
 
 
+# 🔒 7. Sécurité & bonnes pratiques
 
-## 🔒 6. Sécurité & bonnes pratiques
-
-* Validation Zod sur tous les formulaires
+* Validation stricte des formulaires (Zod)
 * API sécurisées
-* Logging d’erreurs
-* Préparation pour authentification admin
-* Upload sécurisé (plus tard)
+* Gestion des rôles admin
+* Système de permissions
+* Logging étendu
+* Protection contre injections / XSS / CSRF
 
 
 
-## 📌 7. Roadmap
+# 📌 8. Roadmap
 
 ### Phase 1 — Base du projet
 
 ✔ Initialisation Next.js
-✔ Tailwind + shadcn/ui
-✔ Setup Prisma
+✔ Tailwind CSS
+✔ shadcn/ui
+✔ Prisma
 ⬜ Page d’accueil
 
-### Phase 2 — Modules utilisateurs
+### Phase 2 — Modules Utilisateurs
 
 ⬜ Immatriculation
 ⬜ Étudiants
 ⬜ Investisseurs
 ⬜ Alertes
 
-### Phase 3 — Admin
+### Phase 3 — Espace Admin
 
 ⬜ Dashboard
-⬜ Validation des dossiers
-⬜ Filtres et recherche
+⬜ Rôles et permissions
+⬜ Gestion du contenu
 
----
 
-## 👤 Auteur
 
-Développé par BOUSSAMBA QUENUM Joseph — Portail officiel de l’Ambassade du Gabon (Version 2025).
+# 👤 Auteur
+
+Développé par ** BOUSSAMBA QUENUM Joseph** — Portail officiel de l’Ambassade du Gabon (Version 2025).
+
+
+

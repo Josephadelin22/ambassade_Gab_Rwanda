@@ -1,36 +1,233 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+# 🇬🇦🇷🇼 Portail Officiel
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Haut-Commissariat / Ambassade de la République Gabonaise en République du Rwanda
+
+**Prototype fonctionnel – Phase de démonstration**
+
+
+
+## 1. Présentation générale
+
+Ce projet est un **prototype de portail officiel** destiné à représenter numériquement l’Ambassade (Haut-Commissariat) de la République Gabonaise en République du Rwanda.
+
+Il vise à :
+
+* Centraliser les **informations institutionnelles**
+* Faciliter l’accès aux **services consulaires**
+* Offrir un espace clair pour la **diaspora gabonaise**
+* Valoriser les **opportunités d’investissement**
+* Améliorer la **communication officielle** entre l’administration et les usagers
+
+> ⚠️ Ce site est actuellement un **prototype de démonstration**, présenté avec succès.
+> Les décisions relatives à la mise en production, à l’hébergement officiel et à la gouvernance du contenu sont en attente.
+
+
+
+## 2. Objectifs du prototype
+
+### Objectifs fonctionnels
+
+* Présenter l’institution et ses représentants
+* Structurer les services consulaires existants
+* Centraliser les contacts, horaires et localisation
+* Réduire les déplacements inutiles
+* Servir de base pour une future plateforme officielle
+
+### Objectifs stratégiques
+
+* Moderniser l’image numérique de la représentation diplomatique
+* Améliorer l’accessibilité de l’information
+* Préparer la transition vers une **digitalisation progressive** des services
+
+
+
+## 3. Périmètre actuel du projet
+
+### Inclus dans le prototype
+
+* Page d’accueil institutionnelle
+* Présentation du Haut-Commissariat
+* Présentation du Haut-Commissaire et du Consul honoraire
+* Section Diaspora
+* Section Investisseurs
+* Section Le Gabon / Rwanda
+* Section Actualités (contenu de démonstration)
+* Section Contact complète
+* Carte Google Maps intégrée
+* Multilingue (Français / Anglais)
+* Navigation fonctionnelle sans erreur 404
+* Pages services déjà structurées
+
+### Hors périmètre (à venir)
+
+* Base de données officielle
+* Authentification utilisateurs
+* Back-office administrateur
+* Paiements en ligne
+* Prise de rendez-vous automatisée
+* Notifications SMS / Email
+* Signature et dépôt de documents en ligne
+
+
+
+## 4. Architecture technique
+
+### Stack technologique
+
+* **Framework** : Next.js (App Router)
+* **Langage** : TypeScript
+* **UI / Design** : Tailwind CSS
+* **Cartographie** : Google Maps Embed
+* **Routing** : basé sur l’arborescence `app/`
+* **State local** : React Hooks (`useState`, `useEffect`)
+* **Aucune base de données** (prototype statique/dynamique)
+
+
+
+## 5. Arborescence principale
+
+```
+app/
+├── page.tsx                  # Accueil
+├── layout.tsx                # Layout global
+├── globals.css
+├── services/
+│   ├── page.tsx              # Accueil des services
+│   ├── passeports/
+│   │   └── page.tsx
+│   ├── etat-civil/
+│   │   └── page.tsx
+│   ├── legalisations/
+│   │   └── page.tsx
+│   └── attestations/
+│       └── page.tsx
+├── immatriculation/
+│   └── page.tsx
+├── etudiants/
+│   └── page.tsx
+├── investisseurs/
+│   └── page.tsx
+├── urgences/
+│   └── page.tsx
+├── equipe/
+│   ├── page.tsx
+│   ├── ambassadeur/
+│   │   └── page.tsx
+│   └── consul/
+│       └── page.tsx
+└── api/
+    └── (routes de démonstration)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 6. Services consulaires intégrés (prototype)
 
-## Learn More
+Les services suivants sont **visibles et structurés** :
 
-To learn more about Next.js, take a look at the following resources:
+* Authentification & légalisation de documents
+* Actes d’état civil
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+  * Naissance
+  * Mariage (transcription)
+  * Décès
+* Passeports & laissez-passer
+* Attestations
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+  * Nationalité
+  * Célibat
+  * Vie / existence
+* Enregistrement et carte consulaire
+* Visas (présentation informative – prototype)
 
-## Deploy on Vercel
+Chaque service est relié à sa page dédiée.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## 7. Informations pratiques intégrées
+
+### Adresse
+
+**KG 617 St N°6, Kigali – Rwanda**
+
+### Horaires
+
+* Lundi à vendredi
+* 09h00 – 16h00
+
+### Contacts
+
+* Téléphone : +250 796 699 240
+* Email : [ambagabonrwanda@gmail.com](mailto:ambagabonrwanda@gmail.com)
+
+### Localisation
+
+* Google Maps intégré directement au site
+
+
+
+## 8. Multilingue
+
+Le site est entièrement **bilingue** :
+
+* 🇫🇷 Français (par défaut)
+* 🇬🇧 Anglais
+
+Le changement de langue est instantané (sans rechargement).
+
+
+
+## 9. Design & UX
+
+* Design institutionnel moderne
+* Couleurs inspirées de l’identité gabonaise
+* Mise en page claire et hiérarchisée
+* Responsive (desktop / mobile)
+* Hero section immersive avec carrousel
+* Navigation fluide et sans erreurs
+
+
+
+## 10. État du projet
+
+### ✔ Présentation
+
+* Présentation du prototype : **effectuée**
+* Retour global : **positif**
+* Compréhension fonctionnelle : **validée**
+
+### ⏳ En attente
+
+* Décision officielle de poursuite
+* Validation institutionnelle
+* Budget et calendrier
+* Accès aux contenus officiels définitifs
+
+
+
+## 11. Prochaines étapes possibles (si validation)
+
+1. Mise en place d’un back-office
+2. Centralisation réelle des demandes
+3. Digitalisation progressive des services
+4. Sécurité, conformité et hébergement officiel
+5. Formation du personnel administratif
+6. Lancement public officiel
+
+
+
+## 12. Mention
+
+> **Prototype réalisé à des fins de démonstration et de réflexion stratégique.**
+> Toute mise en production nécessitera une validation institutionnelle formelle.
+
+
+
+## 13. Crédit
+
+Prototype conçu et développé par
+**INOV E-TECH**
+
+

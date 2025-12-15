@@ -1,0 +1,81 @@
+/* app/globals.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f8fafc;
+  --foreground: #020617;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 100%;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* =================== COMPOSANTS GLOBAUX POUR LES FORMULAIRES =================== */
+/* Carte de section (formulaires, blocs d'informations) */
+.section-card {
+  @apply rounded-2xl border border-slate-200 bg-white/90 p-6 shadow-sm;
+}
+
+/* Titre de section dans les formulaires */
+.section-header {
+  @apply text-sm font-semibold text-slate-900 md:text-base;
+}
+
+/* Champs de saisie (input texte, email, tel, etc.) */
+.input-field {
+  @apply w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm
+    text-slate-900 shadow-sm focus:border-gabon-green/60 focus:outline-none
+    focus:ring-2 focus:ring-gabon-green/30;
+}
+
+/* Zone de texte (textarea) */
+.textarea-field {
+  @apply w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm
+    text-slate-900 shadow-sm focus:border-gabon-green/60 focus:outline-none
+    focus:ring-2 focus:ring-gabon-green/30;
+}
+
+/* Select (liste déroulante) */
+.select-field {
+  @apply w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm
+    text-slate-900 shadow-sm focus:border-gabon-green/60 focus:outline-none
+    focus:ring-2 focus:ring-gabon-green/30;
+}
+
+/* Texte d'erreur sous les champs */
+.error-text {
+  @apply text-[11px] text-red-500;
+}
+
+/* Bouton principal (CTA vert) */
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-full bg-gabon-green
+    px-5 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gabon-green/90
+    focus:outline-none focus:ring-2 focus:ring-gabon-green/50 disabled:cursor-not-allowed
+    disabled:opacity-70;
+}
+
+/* Bouton secondaire (bordure grise) */
+.btn-secondary {
+  @apply inline-flex items-center justify-center rounded-full border border-slate-300
+    px-5 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50;
+}
+
+/* Sous-titres de section */
+.section-subtitle {
+  @apply text-xs text-slate-600 md:text-sm;
+}

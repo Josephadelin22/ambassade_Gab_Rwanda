@@ -230,4 +230,134 @@ Le changement de langue est instantané (sans rechargement).
 Prototype conçu et développé par
 **INOV E-TECH**
 
+## 14. Comment lancer le projet (en local)
+
+Cette section explique comment installer et exécuter le prototype en environnement local à des fins de démonstration ou de développement.
+
+### 14.1 Prérequis
+
+Avant de lancer le projet, assurez-vous d’avoir les éléments suivants installés :
+
+* **Node.js** ≥ 18
+* **npm** ou **yarn**
+* Un navigateur moderne (Chrome, Firefox, Edge)
+* Un environnement de développement (VS Code recommandé)
+
+Vérification :
+
+```bash
+node -v
+npm -v
+```
+
+
+
+### 14.2 Installation du projet
+
+1. Cloner le dépôt :
+
+```bash
+git clone https://github.com/nom-du-repo/ambassade-gabon-rwanda.git
+cd ambassade-gabon-rwanda
+```
+
+2. Installer les dépendances :
+
+```bash
+npm install
+```
+
+ou
+
+```bash
+yarn install
+```
+
+
+
+### 14.3 Lancement du serveur de développement
+
+Démarrer le projet en mode développement :
+
+```bash
+npm run dev
+```
+
+ou
+
+```bash
+yarn dev
+```
+
+Par défaut, l’application est accessible à l’adresse :
+
+```
+http://localhost:3000
+```
+
+
+
+### 14.4 Structure de navigation
+
+* La **page d’accueil** est accessible via `/`
+* Les pages services sont accessibles via :
+
+  * `/services`
+  * `/services/passeports`
+  * `/services/etat-civil`
+  * `/services/legalisations`
+  * `/services/attestations`
+* Les autres pages :
+
+  * `/immatriculation`
+  * `/investisseurs`
+  * `/urgences`
+  * `/equipe`
+  * `/contact` (section intégrée à l’accueil)
+
+Toutes les routes sont basées sur l’arborescence du dossier `app/`.
+
+
+
+### 14.5 Configuration spécifique
+
+Aucune configuration externe n’est requise pour le prototype.
+
+* ❌ Pas de base de données
+* ❌ Pas de variables secrètes
+* ❌ Pas d’API externe critique (hors Google Maps embed)
+
+Le projet est volontairement **simple à lancer**, afin de faciliter :
+
+* les démonstrations
+* les tests institutionnels
+* les présentations officielles
+
+---
+
+### 14.6 Build de production (optionnel)
+
+Pour générer une version optimisée :
+
+```bash
+npm run build
+npm run start
+```
+
+Cela simule un environnement de production local.
+
+
+
+### 14.7 Remarques importantes
+
+* Le projet est un **prototype fonctionnel**
+* Aucune donnée réelle n’est stockée
+* Les formulaires sont non persistants
+* Toute mise en production nécessitera :
+
+  * une base de données
+  * un hébergement officiel
+  * une politique de sécurité et de confidentialité
+
+
 
